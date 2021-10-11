@@ -176,7 +176,22 @@ a.tel {
     margin-left: 0;
   }
 }
-
+@media (max-width: 425px) {
+  #hero .social-links a {
+    font-size: 24px;
+    display: inline-block;
+    background: #0374a8;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 38px;
+    height: 38px;
+    transition: 0.3s;
+  }
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -323,7 +338,14 @@ a.tel {
     margin-bottom: 30px;
   }
 }
-
+@media (max-width: 425px) {
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg-sm.jpg") top right;
+    background-size: cover;
+  }
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -493,6 +515,10 @@ section {
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
+}
+
+.resume .resume-item-custom {
+  min-height: 700px;
 }
 
 .resume .resume-item h4 {
@@ -793,6 +819,10 @@ section {
 @media (max-width: 767px) {
   .testimonials {
     margin: 30px 10px;
+  }
+
+  .resume .resume-item-custom {
+    min-height: unset;
   }
 }
 
