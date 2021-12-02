@@ -517,10 +517,6 @@ section {
   position: relative;
 }
 
-.resume .resume-item-custom {
-  min-height: 700px;
-}
-
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
