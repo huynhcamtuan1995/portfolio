@@ -499,6 +499,22 @@ section {
   background-color: #149ddd;
 }
 
+.skills h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #050d18;
+
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .content ul li {
+  font-family: "Poppins";
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
