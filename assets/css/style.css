@@ -543,13 +543,18 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.resume .resume-item h6 {
   font-size: 16px;
   background: #e4edf9;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  font-style: italic;line-height: 1.5
 }
 
 .resume .resume-item ul {
