@@ -122,6 +122,71 @@ a.tel {
   text-decoration: none;
 }
 
+#header .profile div.cv-container {
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  18% {
+    background-position: 33%;
+  }
+  35% {
+    background-position: 66%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  68% {
+    background-position: 66%;
+  }
+  85% {
+    background-position: 33%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+#header .profile button.btn-cv {
+  font-size: 18px;
+  background: #212431;
+  display: inline-block;
+  color: #fff;
+  padding: 4px 0;
+  margin-top: 18px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  transition: 0.3s;
+  width: 180px;
+  font-family: "Poppins", sans-serif;
+
+  background: linear-gradient(
+    -45deg,
+    #5d6cc2 0%,
+    #5a55ae 13%,
+    #7b5fac 25%,
+    #8f6aae 38%,
+    #a86aa4 50%,
+    #8f6aae 62%,
+    #7b5fac 75%,
+    #5a55ae 87%,
+    #5d6cc2 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 2s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .profile button.btn-cv > a {
+  color: #e5c6c6;
+}
+
 #hero .social-links a {
   font-size: 25px;
   display: inline-block;
@@ -554,7 +619,8 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  font-style: italic;line-height: 1.5
+  font-style: italic;
+  line-height: 1.5;
 }
 
 .resume .resume-item ul {
