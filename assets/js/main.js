@@ -84,7 +84,7 @@
         if ($("body").hasClass("mobile-nav-active")) {
           $("body").removeClass("mobile-nav-active");
           $(".mobile-nav-toggle i").toggleClass(
-            "icofont-navigation-menu icofont-close"
+            "bx bx-menu bx bx-x"
           );
         }
         return false;
@@ -112,7 +112,7 @@
   $(document).on("click", ".mobile-nav-toggle", function (e) {
     $("body").toggleClass("mobile-nav-active");
     $(".mobile-nav-toggle i").toggleClass(
-      "icofont-navigation-menu icofont-close"
+      "bx bx-menu bx bx-x"
     );
   });
 
@@ -122,7 +122,7 @@
       if ($("body").hasClass("mobile-nav-active")) {
         $("body").removeClass("mobile-nav-active");
         $(".mobile-nav-toggle i").toggleClass(
-          "icofont-navigation-menu icofont-close"
+          "bx bx-menu"
         );
       }
     }

@@ -300,7 +300,7 @@ a.tel {
   z-index: 9998;
   border: 0;
   background: none;
-  font-size: 24px;
+  font-size: 40px;
   transition: all 0.4s;
   outline: none !important;
   line-height: 1;
@@ -309,7 +309,7 @@ a.tel {
 }
 
 .mobile-nav-toggle i {
-  color: #149ddd;
+  color: #fff;
 }
 
 .mobile-nav-active {
@@ -434,6 +434,13 @@ section {
   left: 0;
 }
 
+.section-title h2 i.bx {
+  vertical-align: bottom;
+  font-size: 32px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
 .section-title p {
   margin-bottom: 0;
 }
@@ -457,9 +464,10 @@ section {
 }
 
 .about .content ul i {
-  font-size: 20px;
+  font-size: 24px;
   padding-right: 2px;
   color: #149ddd;
+  vertical-align: text-top;
 }
 
 .about .content p:last-child {
@@ -565,6 +573,22 @@ section {
 
 .skills .content ul li {
   font-family: "Poppins";
+  list-style: none;
+  line-height: 2;
+}
+
+.skills .content ul li i {
+  font-size: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.skills h3 .bx  {
+  vertical-align: middle;
+  font-size: 28px;
+  margin-right: 8px;
+  margin-bottom: 2px;
 }
 
 /*--------------------------------------------------------------
