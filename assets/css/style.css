@@ -172,6 +172,7 @@ a.tel {
 #header .profile button.btn-cv > a {
   color: #ffffff;
   font-weight: bold;
+  width: 100%;
 }
 
 #hero .social-links a {
