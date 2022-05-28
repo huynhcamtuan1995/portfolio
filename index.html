@@ -1264,39 +1264,38 @@
                </div>
 
                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                  <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                  <form action="#" method="post" role="form" class="email-form" id="email-form">
                      <div class="form-row">
                         <div class="form-group col-md-6">
                            <label for="name">Your Name</label>
-                           <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                              data-msg="Please enter at least 4 chars" />
-                           <div class="validate"></div>
+                           <input type="text" name="name" class="form-control" id="name" minlength="4" required />
+                           <label id="name-error" class="error" for="name" style="display: none;">&nbsp;</label>
                         </div>
                         <div class="form-group col-md-6">
                            <label for="name">Your Email</label>
-                           <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                              data-msg="Please enter a valid email" />
-                           <div class="validate"></div>
+                           <input type="text" class="form-control" name="email" id="email"
+                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                           <label id="name-error" class="error" for="email" style="display: none">&nbsp;</label>
                         </div>
                      </div>
                      <div class="form-group">
                         <label for="name">Subject</label>
-                        <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                           data-msg="Please enter at least 8 chars of subject" />
-                        <div class="validate"></div>
+                        <input type="text" class="form-control" name="subject" id="subject" minlength="6" required />
+                        <label id="name-error" class="error" for="subject" style="display: none;">&nbsp;</label>
                      </div>
                      <div class="form-group">
                         <label for="name">Message</label>
-                        <textarea class="form-control" name="message" rows="10" data-rule="required"
-                           data-msg="Please write something for us"></textarea>
-                        <div class="validate"></div>
+                        <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+                        <label id="name-error" class="error" for="message" style="display: none;">&nbsp;</label>
                      </div>
+
                      <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                        <div id="loading" class="loading">Loading</div>
+                        <div id="error-message" class="error-message"></div>
+                        <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
                      </div>
-                     <div class="text-center"><button type="submit">Send Message</button></div>
+                     <input type="hidden" name="service" id="service" value="iPortfolio" required />
+                     <div class="text-center"><button id="submit-form" type="submit">Send Message</button></div>
                   </form>
                </div>
             </div>
@@ -1321,10 +1320,29 @@
       </div>
    </footer><!-- End  Footer -->
 
+
+   <!-- Modal -->
+   <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-body" style="text-align:center;">
+               <p>&nbsp;</p>
+               <h1>THANK YOU!</h1>
+               <hr>
+               <p id="message-modal"></p>
+               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+               <p>&nbsp;</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End modal -->
+
    <a href="#" class="back-to-top"><i class="bx bxs-chevron-up"></i></a>
 
    <!-- Vendor JS Files -->
    <script src="assets/vendor/jquery/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
@@ -1338,6 +1356,7 @@
 
    <!-- Template Main JS File -->
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/form.js"></script>
 
    <!--Start of Tawk.to Script-->
    <script type="text/javascript">
