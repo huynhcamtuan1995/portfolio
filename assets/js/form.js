@@ -32,7 +32,7 @@ $(document).ready(function () {
       $("#submit-form").hide();
       const formData = $(form);
       const actionUrl =
-        "https://script.google.com/macros/s/AKfycbx8b5GRGxyqZwcAZWi3DOSLPrcaEWQFY2M6LRCvRoGUA_esTVaobBwN1XwtwrUq7PVgaw/exec";
+        "https://script.google.com/macros/s/AKfycbzIRakPU-BR8g4j5x7hX1iZUgfDAHx66coIBCvekSCBbhUX0sdfZZxDBJpQEm2rnFD3Pg/exec";
 
       $.ajax({
         type: "POST",
