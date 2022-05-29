@@ -28,8 +28,6 @@ $(document).ready(function () {
       email: "Please enter a valid email address",
     },
     submitHandler: function (form) {
-      $("#loading").show();
-      $("#submit-form").hide();
       const formData = $(form);
       const actionUrl =
         "https://script.google.com/macros/s/AKfycbzIRakPU-BR8g4j5x7hX1iZUgfDAHx66coIBCvekSCBbhUX0sdfZZxDBJpQEm2rnFD3Pg/exec";
@@ -38,6 +36,10 @@ $(document).ready(function () {
         type: "POST",
         url: actionUrl,
         data: formData.serialize(),
+        beforeSend: function () {
+          $("#loading").show();
+          $("#submit-form").hide();
+        },
         success: function (data) {
           $("#message-modal").html(
             "Your message has been sent<br/>I will reply you soon"
