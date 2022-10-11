@@ -374,6 +374,21 @@ a.tel {
   border-bottom: 3px solid #149ddd;
 }
 
+#hero h2 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero h2 span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -388,6 +403,7 @@ a.tel {
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
+    margin-top: 0;
     margin-bottom: 30px;
   }
 }
