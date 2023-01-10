@@ -228,6 +228,8 @@
     autoplay: true,
     dots: true,
     loop: true,
+    margin: 10,
+    dotsClass: "owl-dots owl-dots--display",
     responsive: {
       0: {
         items: 1,

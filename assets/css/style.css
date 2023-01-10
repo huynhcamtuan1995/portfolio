@@ -130,6 +130,7 @@ a.tel {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -151,14 +152,12 @@ a.tel {
   justify-content: center;
   align-items: center;
 
-  background: repeating-linear-gradient(
-    to right,
-    #a3752f 0,
-    #a72347 25%,
-    #0d3175 50%,
-    #a72347 75%,
-    #a3752f 100%
-  );
+  background: repeating-linear-gradient(to right,
+      #a3752f 0,
+      #a72347 25%,
+      #0d3175 50%,
+      #a72347 75%,
+      #a3752f 100%);
   background-size: 200% auto;
   background-position: 0 100%;
   -webkit-animation: gradient 2s infinite;
@@ -169,7 +168,7 @@ a.tel {
   animation-timing-function: linear;
 }
 
-#header .profile button.btn-cv > a {
+#header .profile button.btn-cv>a {
   color: #ffffff;
   font-weight: bold;
   width: 100%;
@@ -225,10 +224,12 @@ a.tel {
   #header {
     left: -300px;
   }
+
   #main {
     margin-left: 0;
   }
 }
+
 @media (max-width: 425px) {
   #hero .social-links a {
     font-size: 24px;
@@ -245,6 +246,7 @@ a.tel {
     transition: 0.3s;
   }
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -259,7 +261,7 @@ a.tel {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
@@ -281,15 +283,15 @@ a.tel {
 }
 
 .nav-menu a:hover,
-.nav-menu .active > a,
-.nav-menu li:hover > a {
+.nav-menu .active>a,
+.nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
 
 .nav-menu a:hover i,
-.nav-menu .active > a i,
-.nav-menu li:hover > a i {
+.nav-menu .active>a i,
+.nav-menu li:hover>a i {
   color: #149ddd;
 }
 
@@ -400,6 +402,7 @@ a.tel {
     font-size: 28px;
     line-height: 36px;
   }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -407,6 +410,7 @@ a.tel {
     margin-bottom: 30px;
   }
 }
+
 @media (max-width: 425px) {
   #hero {
     width: 100%;
@@ -415,6 +419,7 @@ a.tel {
     background-size: cover;
   }
 }
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -425,10 +430,6 @@ section {
 
 .section-bg {
   background: #f5f8fd;
-}
-
-.section-title {
-  padding-bottom: 30px;
 }
 
 .section-title h2 {
@@ -853,12 +854,38 @@ section {
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
-  min-height: 320px;
+  min-height: auto;
+}
+
+.testimonials .time-line {
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.testimonials h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.testimonials .owl-dots--display {
+  display: block !important;
+}
+
+.testimonials h5 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1052,7 +1079,7 @@ section {
   font-weight: 600;
 }
 
-.contact .email-form .error-message br + br {
+.contact .email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1126,6 +1153,7 @@ section {
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
 }
+
 #popup-modal button {
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
@@ -1144,6 +1172,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1153,6 +1182,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1180,11 +1210,11 @@ section {
   font-size: 15px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;
@@ -1195,9 +1225,11 @@ section {
   .breadcrumbs .d-flex {
     display: block !important;
   }
+
   .breadcrumbs ol {
     display: block;
   }
+
   .breadcrumbs ol li {
     display: inline-block;
   }
@@ -1262,7 +1294,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1304,6 +1336,7 @@ section {
   background-color: rgba(0, 107, 9, 0.5);
   font-style: italic;
 }
+
 .portfolio-data h3 span.status.soon {
   background-color: rgba(126, 148, 27, 0.692);
 }
@@ -1322,6 +1355,7 @@ section {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
   }
+
   .portfolio-details .portfolio-info {
     position: static;
     margin-top: 30px;
