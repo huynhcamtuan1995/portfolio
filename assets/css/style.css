@@ -685,6 +685,10 @@ section {
   border: 2px solid #1f5297;
 }
 
+.resume .xl-resume-item-min-height-200 {
+  min-height: 200px;
+}
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -970,6 +974,10 @@ section {
 
   .resume .resume-item-custom {
     min-height: unset;
+  }
+
+  .resume .xl-resume-item-min-height-200 {
+    display: none;
   }
 }
 
