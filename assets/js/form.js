@@ -1,5 +1,8 @@
-// Calculate age
 $(document).ready(function () {
+  const successedMess = "Your message has been sent<br/>I will reply you soon"
+  const failedMess = "Have problems with your message<br/>Please try again later<br/>Or contact me via email, telegram, linkedin, etc..."
+
+
   $("#email-form").validate({
     // Specify validation rules
     rules: {
@@ -30,7 +33,7 @@ $(document).ready(function () {
     submitHandler: function (form) {
       const formData = $(form);
       const actionUrl =
-        "https://script.google.com/macros/s/AKfycbzIRakPU-BR8g4j5x7hX1iZUgfDAHx66coIBCvekSCBbhUX0sdfZZxDBJpQEm2rnFD3Pg/exec";
+        "https://profile-app-test.fly.dev/api/portfolio/contact";
 
       $.ajax({
         type: "POST",
@@ -40,17 +43,13 @@ $(document).ready(function () {
           $("#loading").show();
           $("#submit-form").hide();
         },
-        success: function (data) {
-          $("#message-modal").html(
-            "Your message has been sent<br/>I will reply you soon"
-          );
+        success: function (_data) {
+          $("#message-modal").html(successedMess);
         },
-        error: function (data) {
-          $("#message-modal").html(
-            "Have problems with your message<br/>Please try again later<br/>Or contact me via email, telegram, linkedin, etc..."
-          );
+        error: function (_data) {
+          $("#message-modal").html(failedMess);
         },
-        complete: function (data) {
+        complete: function (_data) {
           $("#loading").hide();
           $("#submit-form").show();
           $("#popup-modal").modal("show");
