@@ -47,6 +47,14 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.visibility-hidden {
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -986,6 +994,24 @@ section {
 --------------------------------------------------------------*/
 .contact {
   padding-bottom: 130px;
+}
+
+.contact #g-recaptcha {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.contact .form-group-captcha {
+  margin-bottom: 32px;
+}
+
+.contact .form-group-captcha #captcha-error {
+  margin-bottom: 0;
+}
+
+.contact #captcha-error {
+  margin-top: -16px;
 }
 
 .contact .info {

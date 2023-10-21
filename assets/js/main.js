@@ -60,7 +60,7 @@
   $(document).on("click", ".nav-menu a, .scrollto", function (e) {
     if (
       location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
+      this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       e.preventDefault();
@@ -262,4 +262,18 @@
   $(window).on("load", function () {
     aos_init();
   });
+
+  $(document).ready(function () {
+    window.recaptchaOnloadCallback = function () {
+      let widget = document.getElementById('g-recaptcha')
+      grecaptcha.render(widget, {
+        sitekey: '6LeFGrwoAAAAAA8pQwXyc9q5CK0q-zArzI3RKeet',
+        badge: 'inline',
+        size: 'invisible',
+        callback: function (token) {
+          document.getElementById('captcha').value = token
+        }
+      });
+    }
+  })
 })(jQuery);

@@ -29,7 +29,8 @@
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
 
 </head>
 
@@ -1199,20 +1200,34 @@
                                     required />
                                 <label id="name-error" class="error" for="subject" style="display: none;">&nbsp;</label>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group m-0">
                                 <label for="name">Message</label>
                                 <textarea class="form-control" name="message" id="message" rows="10"
                                     required></textarea>
                                 <label id="name-error" class="error" for="message" style="display: none;">&nbsp;</label>
                             </div>
 
-                            <div class="mb-3">
+
+                            <input type="hidden" name="service" id="service" value="iPortfolio" required />
+
+                            <div>
                                 <div id="loading" class="loading">Loading</div>
                                 <div id="error-message" class="error-message"></div>
                                 <div id="sent-message" class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
-                            <input type="hidden" name="service" id="service" value="iPortfolio" required />
-                            <div class="text-center"><button id="submit-form" type="submit">Send Message</button></div>
+
+
+                            <div class="text-center form-group-captcha">
+                                <input class="visibility-hidden" type="text" name="captcha" id="captcha" required />
+                                <div id="g-recaptcha"></div>
+                                <label id="captcha-error" class="error" for="captcha"
+                                    style="display: none;">&nbsp;</label>
+
+                            </div>
+                            <div class="text-center">
+                                <div class="text-center"><button id="submit-form" type="submit">Send Message</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -1269,11 +1284,15 @@
     <script src="assets/vendor/typed.js/typed.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="https://cdnJS.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnloadCallback&render=explicit" async></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.min.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
     <script src="assets/js/extends.min.js"></script>
     <script src="assets/js/form.min.js"></script>
+    <!-- <script src="assets/js/form.js"></script> -->
+
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

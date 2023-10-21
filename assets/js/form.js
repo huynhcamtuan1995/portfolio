@@ -21,6 +21,10 @@ $(document).ready(function () {
       message: {
         required: true,
       },
+
+      captcha: {
+        required: true,
+      },
     },
 
     // Specify validation error messages
@@ -29,6 +33,7 @@ $(document).ready(function () {
       subject: "Please enter your subject",
       message: "Please enter your message",
       email: "Please enter a valid email address",
+      captcha: "Please verify captcha",
     },
     submitHandler: function (form) {
       const formData = $(form);
