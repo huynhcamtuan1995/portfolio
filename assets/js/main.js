@@ -267,7 +267,7 @@
     window.recaptchaOnloadCallback = function () {
       let widget = document.getElementById('g-recaptcha')
       grecaptcha.render(widget, {
-        sitekey: '6LeFGrwoAAAAAA8pQwXyc9q5CK0q-zArzI3RKeet',
+        sitekey: '6LdGwL4oAAAAAGCOMX7QdR4LWnv-UM6AH97Ftvgx',
         badge: 'inline',
         callback: function (token) {
           document.getElementById('captcha').value = token
