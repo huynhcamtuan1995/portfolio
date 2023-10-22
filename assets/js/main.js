@@ -269,7 +269,6 @@
       grecaptcha.render(widget, {
         sitekey: '6LeFGrwoAAAAAA8pQwXyc9q5CK0q-zArzI3RKeet',
         badge: 'inline',
-        size: 'invisible',
         callback: function (token) {
           document.getElementById('captcha').value = token
         }
