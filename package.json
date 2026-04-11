@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview --outDir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huynhcamtuan1995/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huynhcamtuan1995/portfolio/issues"
+  },
+  "homepage": "https://github.com/huynhcamtuan1995/portfolio#readme",
+  "devDependencies": {
+    "vite": "^8.0.8",
+    "vite-plugin-static-copy": "^3.4.0"
+  }
+}
