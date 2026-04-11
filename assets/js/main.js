@@ -241,6 +241,16 @@
         items: 3,
       },
     },
+    onInitialized: function (event) {
+      $(event.target).find('.owl-dot').each(function (index) {
+        $(this).attr('aria-label', 'Go to slide ' + (index + 1));
+      });
+    },
+    onChanged: function (event) {
+      $(event.target).find('.owl-dot').each(function (index) {
+        $(this).attr('aria-label', 'Go to slide ' + (index + 1));
+      });
+    }
   });
 
   // Portfolio details carousel
