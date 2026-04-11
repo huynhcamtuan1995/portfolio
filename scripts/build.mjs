@@ -62,6 +62,10 @@ async function runBuild() {
     console.log('\n📄 Minifying HTML files...\n');
     await processHtmlFiles(DIST);
 
+    // Step 6: Audit asset sizes
+    console.log('\n🔍 Auditing asset sizes...\n');
+    auditAssetSizes(DIST);
+
     console.log('\n✅ Build complete and cache-busted!\n');
   } catch (err) {
     console.error('\n❌ Build failed:', err);
@@ -179,6 +183,24 @@ async function processHtmlFiles(dir) {
     const newSize = Buffer.byteLength(minified);
     const savings = ((1 - newSize / originalSize) * 100).toFixed(1);
     console.log(`  ✓ ${file}: ${formatBytes(originalSize)} → ${formatBytes(newSize)} (${savings}% smaller)`);
+  }
+}
+
+function auditAssetSizes(dir) {
+  const imagesDir = join(dir, 'assets/img');
+  if (!existsSync(imagesDir)) return;
+
+  const files = readdirSync(imagesDir);
+  const LARGE_THRESHOLD = 200 * 1024; // 200KB
+
+  for (const file of files) {
+    const filePath = join(imagesDir, file);
+    const stats = readFileSync(filePath);
+    const size = stats.length;
+
+    if (size > LARGE_THRESHOLD) {
+      console.warn(`  ⚠️  Large asset detected: ${file} (${formatBytes(size)}). Consider further optimization.`);
+    }
   }
 }
 

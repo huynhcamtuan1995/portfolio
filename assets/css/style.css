@@ -341,7 +341,7 @@ a.tel {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right;
+  background: url("../img/hero-bg.webp") top right;
   background-size: cover;
 }
 
@@ -423,7 +423,7 @@ a.tel {
   #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg-sm.jpg") top right;
+    background: url("../img/hero-bg-sm.webp") top right;
     background-size: cover;
   }
 }
