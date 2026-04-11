@@ -2,6 +2,21 @@ $(document).ready(function () {
   const successedMess = "Your message has been sent<br/>I will reply you soon"
   const failedMess = "Have problems with your message<br/>Please try again later<br/>Or contact me via email, telegram, linkedin, etc..."
 
+  function loadRecaptcha() {
+    if (window.recaptchaLoaded) return;
+    window.recaptchaLoaded = true;
+    var script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js?onload=recaptchaOnloadCallback&render=explicit";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
+  // Load reCAPTCHA when user starts filling the form
+  $("#email-form input, #email-form textarea").on("focus touchstart", function () {
+    loadRecaptcha();
+  });
 
   $("#email-form").validate({
     // Specify validation rules

@@ -35,23 +35,46 @@
     <link href="assets/img/mylogo.png" rel="icon">
     <link href="assets/img/mylogo.png" rel="apple-touch-icon">
 
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="assets/img/hero-bg-sm.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="assets/img/hero-bg.webp" media="(min-width: 769px)">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:400,600,700|Poppins:400,600&display=swap"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.min.css" rel="stylesheet">
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="assets/vendor/venobox/venobox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Critical CSS for Instant Paint -->
+    <style>
+        body { font-family: "Open Sans", sans-serif; color: #272829; }
+        h1, h2, h3, h4, h5, h6 { font-family: "Raleway", sans-serif; }
+        #hero { width: 100%; height: 100vh; background: url("assets/img/hero-bg.webp") top right; background-size: cover; position: relative; }
+        #hero:before { content: ""; background: rgba(5, 13, 24, 0.3); position: absolute; bottom: 0; top: 0; left: 0; right: 0; z-index: 1; }
+        #hero .hero-container { position: relative; z-index: 2; min-width: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; }
+        #hero h1 { margin: 0 0 10px 0; font-size: 64px; font-weight: 700; line-height: 56px; color: #fff; }
+        #hero h2 { color: #fff; margin-top: 20px; font-size: 26px; font-family: "Poppins", sans-serif; }
+        @media (max-width: 768px) {
+            #hero h1 { font-size: 28px; line-height: 36px; }
+            #hero h2 { font-size: 18px; line-height: 24px; }
+        }
+        @media (max-width: 425px) {
+            #hero { background: url("assets/img/hero-bg-sm.webp") top right; }
+        }
+        .social-links a { font-size: 18px; display: inline-block; background: #212431; color: #fff; line-height: 1; padding: 8px 0; margin-right: 4px; border-radius: 50%; text-align: center; width: 36px; height: 36px; transition: 0.3s; }
+    </style>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -650,8 +673,8 @@
     <script src="assets/vendor/owl.carousel/owl.carousel.min.js" defer></script>
     <script src="assets/vendor/typed.js/typed.min.js" defer></script>
     <script src="assets/vendor/aos/aos.js" defer></script>
-    <script src="https://cdnJS.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnloadCallback&render=explicit" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" defer></script>
+    <!-- reCAPTCHA script will be lazy-loaded in JS -->
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js" defer></script>
@@ -663,15 +686,29 @@
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {},
             Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/61ed1c9b9bd1f31184d8d342/1fq33fgm0';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
+
+        function loadTawk() {
+            if (window.tawkLoaded) return;
+            window.tawkLoaded = true;
+            (function () {
+                var s1 = document.createElement("script"),
+                    s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/61ed1c9b9bd1f31184d8d342/1fq33fgm0';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        }
+
+        // Load Tawk after 5s or on first interaction
+        var tawkTimeout = setTimeout(loadTawk, 5000);
+        ['scroll', 'keydown', 'touchstart', 'mousemove'].forEach(function(e) {
+            window.addEventListener(e, function() {
+                clearTimeout(tawkTimeout);
+                loadTawk();
+            }, { once: true, passive: true });
+        });
     </script>
     <!--End of Tawk.to Script-->
 </body>
