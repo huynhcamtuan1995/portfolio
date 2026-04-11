@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/huynhcamtuan1995/portfolio#readme",
   "devDependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.46.1",
     "vite": "^8.0.8",
     "vite-plugin-static-copy": "^3.4.0"
   }
