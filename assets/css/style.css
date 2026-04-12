@@ -61,28 +61,30 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50px;
   right: 15px;
   bottom: 90px;
-  background: #149ddd;
+  background: rgba(20, 157, 221, 0.8);
+  backdrop-filter: blur(5px);
   color: #fff;
-  transition: display 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 99999;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .back-to-top i {
   font-size: 24px;
   position: absolute;
-  top: 7px;
-  left: 8px;
+  top: 10px;
+  left: 11px;
 }
 
 .back-to-top:hover {
   color: #fff;
-  background: #2eafec;
-  transition: background 0.2s ease-in-out;
+  background: #149ddd;
+  transform: scale(1.1);
 }
 
 /*--------------------------------------------------------------
@@ -103,7 +105,10 @@ a.tel {
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
-  background: #040b14;
+  background: rgba(4, 11, 20, 0.85); /* Slightly transparent */
+  backdrop-filter: blur(15px); /* Glassmorphism */
+  -webkit-backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   overflow-y: auto;
 }
 
@@ -437,7 +442,7 @@ section {
 }
 
 .section-bg {
-  background: #f5f8fd;
+  background: linear-gradient(135deg, #f5f8fd 0%, #e2eaf4 100%);
 }
 
 .section-title h2 {
@@ -583,6 +588,51 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #149ddd;
+  box-shadow: 0 0 10px rgba(20, 157, 221, 0.5);
+}
+
+/* Premium Skill Badges */
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-badge {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(20, 157, 221, 0.1);
+}
+
+.skill-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(20, 157, 221, 0.15);
+  background: #fff;
+}
+
+.skill-badge i {
+  font-size: 24px;
+  color: #149ddd;
+}
+
+.skill-badge span {
+  font-weight: 600;
+  color: #2c2f3f;
+}
+
+/* Highlight Metrics */
+.highlight-metric {
+  color: #149ddd;
+  font-weight: 800;
+  font-size: 1.1em;
+  text-shadow: 0 0 1px rgba(20, 157, 221, 0.2);
 }
 
 .skills h3 {
@@ -1427,7 +1477,10 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #040b14;
+  background: rgba(4, 11, 20, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #footer .copyright {
@@ -1445,6 +1498,54 @@ section {
   #footer {
     position: static;
     width: auto;
-    padding-right: 20px 15px;
+    padding: 20px 15px;
   }
+}
+/* Contact Section Enhancements */
+.contact .info {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact .email-form {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact .email-form button[type="submit"] {
+  background: #149ddd;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
+}
+
+.contact .email-form button[type="submit"]:hover {
+  background: #37b3ed;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 157, 221, 0.4);
+}
+
+/* Scroll reveal helper */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

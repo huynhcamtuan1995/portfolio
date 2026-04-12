@@ -7,41 +7,6 @@
 !(function ($) {
   "use strict";
 
-  // Calculate age
-  $(document).ready(function () {
-    const monthShort = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-
-    const birthday = _getBirthday();
-    const age = _calculateAge(birthday);
-    _setValueAge(age);
-
-    function _getBirthday() {
-      return moment($("#birthday").data("date"), "DD-MM-YYYY");
-    }
-
-    function _calculateAge(birthday) {
-      const ageDifMs = Date.now() - birthday;
-      const ageDate = new Date(ageDifMs); // miliseconds from epoch
-      return Math.abs(ageDate.getUTCFullYear() - 1970);
-    }
-
-    function _setValueAge(age) {
-      $("#age").html($("#age").html().replace("{Now - MyBirthDay}", age));
-    }
-  });
 
   // Hero typed
   if ($(".typed").length) {
@@ -272,6 +237,20 @@
   $(window).on("load", function () {
     aos_init();
   });
+
+  // Achievement scroll reveal
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
 
   $(document).ready(function () {
     window.recaptchaOnloadCallback = function () {
