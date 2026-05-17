@@ -1,7 +1,9 @@
 User-agent: *
-Disallow: /assets/css/
-Disallow: /assets/js/
-Disallow: /assets/vendor/
+Disallow: /assets/js/extends.js
+Disallow: /assets/js/extends.min.js
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/vendor/
 Disallow: /assets/forms/
 
-Sitemap: https://tuanhuynhdev.info/sitemap_index.xml
+Sitemap: https://tuanhuynhdev.info/sitemap.xml

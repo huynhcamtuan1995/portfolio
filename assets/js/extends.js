@@ -25,7 +25,7 @@ function goToPage() {
     window.onscroll = function (event) {
         //
         let section = document.getElementById('projects')
-        if (window.scrollY >= (section.offsetTop - (section.offsetHeight / 2.5)) && !isAppend) {
+        if (section && window.scrollY >= (section.offsetTop - (section.offsetHeight / 2.5)) && !isAppend) {
             appendBlock()
             isAppend = true
         }
