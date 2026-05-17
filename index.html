@@ -345,42 +345,94 @@
                     <h2><i class="bx bx-code-alt"></i> Skills</h2>
                 </div>
                 <div class="row skills-content">
+                    
+                    <!-- Programming Languages / Frameworks -->
                     <div class="col-lg-12 mt-3" data-aos="fade-up" data-aos-delay="100">
                         <h3><i class='bx bx-terminal'></i>Programming Languages / Frameworks</h3>
                         <div class="content">
                             <ul>
-                                <li><i class="devicon-java-plain colored"></i> <b>Back-end:</b> Java 8+ (Spring Boot, WebFlux, JPA, Kafka), <i class="devicon-csharp-plain colored"></i> C# .NET Core (ASP.NET Web API, EF Core), <i class="devicon-nodejs-plain colored"></i> Node.js Express.</li>
-                                <li><i class="devicon-react-original colored"></i> <b>Front-end:</b> React, <i class="devicon-angularjs-plain colored"></i> Angular 2+, JavaScript/TypeScript, HTML5/CSS3.
+                                <li>
+                                    <b>Primarily on Back-end:</b>
+                                    <ul>
+                                        <li><i class="devicon-java-plain colored"></i> <b>Java 8+, Spring Boot</b> (Spring MVC, WebFlux, Spring Data JPA, Spring Cloud Resilience4j & Kafka)</li>
+                                        <li><i class="devicon-csharp-plain colored"></i> <b>C# .NET Core</b> (ASP.NET Core Web API, Entity Framework Core)</li>
+                                        <li><i class="bx bx-transfer"></i> <b>RESTful API design</b> & third-party API integration</li>
+                                        <li><i class="devicon-nodejs-plain colored"></i> <b>Node.js (Express)</b> for BFF integration</li>
+                                    </ul>
                                 </li>
-                                <li><i class="bx bx-layer"></i> <b>Architecture:</b> Microservices Architecture (MSA), CQRS, DAPR, System Design.
+                                <li class="mt-2">
+                                    <b>Front-end:</b>
+                                    <ul>
+                                        <li><i class="devicon-react-original colored"></i> <b>React</b>, <i class="devicon-angularjs-plain colored"></i> <b>Angular 2+</b> (SPA development)</li>
+                                        <li><i class="devicon-javascript-plain colored"></i> <b>JavaScript/TypeScript</b>, HTML5/CSS3 and CSS preprocessor SCSS/SASS</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
-
                     </div>
-                    <div class="col-lg-12" data-aos="fade-up">
-                        <h3><i class='bx bx-window-alt'></i>Infrastructure & Messaging</h3>
+
+                    <!-- Architecture & System Design -->
+                    <div class="col-lg-12 mt-4" data-aos="fade-up">
+                        <h3><i class='bx bx-layer'></i>Architecture & System Design</h3>
                         <div class="content">
                             <ul>
-                                <li><i class="devicon-apachekafka-original colored"></i> <b>Messaging:</b> Kafka (consumer lag optimization), <i class="bx bxl-rabbitmq"></i> RabbitMQ</li>
-                                <li><i class="devicon-docker-plain colored"></i> <b>DevOps:</b> Docker, <i class="devicon-kubernetes-plain colored"></i> Kubernetes, CI/CD, <i class="devicon-amazonwebservices-original colored"></i> AWS Cloud</li>
-                                <li><i class="devicon-grafana-original colored"></i> <b>Monitoring:</b> OpenTelemetry, Grafana, OpenSearch</li>
+                                <li><i class="bx bx-cube-alt"></i> <b>Microservices Architecture (MSA)</b></li>
+                                <li><i class="bx bx-shuffle"></i> <b>CQRS</b> (Optimizing Read & Write path)</li>
+                                <li><i class="bx bx-shape-polygon"></i> <b>DAPR</b> (Distributed Application Runtime)</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-lg-12 mt-3" data-aos="fade-up">
-                        <h3><i class='bx bxs-data'></i>Databases & Others</h3>
+                    <!-- Message Queue & Event Streaming -->
+                    <div class="col-lg-12 mt-4" data-aos="fade-up">
+                        <h3><i class='bx bx-broadcast'></i>Message Queue & Event Streaming</h3>
                         <div class="content">
                             <ul>
-                                <li><i class="devicon-postgresql-plain colored"></i> <b>Databases:</b> PostgreSQL (Optimization & Design), <i class="devicon-redis-plain colored"></i> Redis (Caching, Locks).</li>
-                                <li><i class="bx bx-credit-card"></i> <b>Fintech:</b> Business process automation, Payment systems, PSP integration.</li>
-                                <li><i class="devicon-git-plain colored"></i> <b>Tools:</b> Postman, Git (GitLab, GitHub), CI/CD.</li>
+                                <li><i class="devicon-apachekafka-original colored"></i> <b>Kafka</b> (consumer lag analysis & optimization)</li>
+                                <li><i class="bx bxl-rabbitmq"></i> <b>RabbitMQ</b></li>
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Databases -->
+                    <div class="col-lg-12 mt-4" data-aos="fade-up">
+                        <h3><i class='bx bxs-data'></i>Databases</h3>
+                        <div class="content">
+                            <ul>
+                                <li><i class="devicon-postgresql-plain colored"></i> <b>Relational:</b> PostgreSQL — query optimization, indexing strategies, database design</li>
+                                <li><i class="devicon-redis-plain colored"></i> <b>NoSQL:</b> Redis (Caching, Distributed Lock, Keyspace Events)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & Infrastructure -->
+                    <div class="col-lg-12 mt-4" data-aos="fade-up">
+                        <h3><i class='bx bx-cloud'></i>DevOps & Infrastructure</h3>
+                        <div class="content">
+                            <ul>
+                                <li><i class="devicon-docker-plain colored"></i> <b>Docker</b>, <i class="devicon-kubernetes-plain colored"></i> <b>Kubernetes</b></li>
+                                <li><i class="bx bx-infinite"></i> <b>CI/CD:</b> Jenkins, GitLab CI</li>
+                                <li><i class="devicon-amazonwebservices-original colored"></i> <b>Clouds:</b> AWS</li>
+                                <li><i class="devicon-grafana-original colored"></i> <b>Monitoring:</b> OpenTelemetry, Grafana, OpenSearch (Distributed Tracing & Logging)</li>
+                                <li><i class="devicon-git-plain colored"></i> <b>Version Control:</b> Git (GitLab, GitHub)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- AI & Others -->
+                    <div class="col-lg-12 mt-4" data-aos="fade-up">
+                        <h3><i class='bx bx-cog'></i>AI & Others</h3>
+                        <div class="content">
+                            <ul>
+                                <li><i class="bx bx-bot"></i> <b>AI Workflows:</b> Orchestrating multi-agent AI workflows by defining tailored rules and skill sets, significantly boosting team productivity and output efficiency.</li>
+                                <li><i class="bx bx-task"></i> Business process automation & workflow optimization</li>
+                                <li><i class="bx bx-slider-alt"></i> <b>Postman</b> (auto-scripts, mock server, test flows)</li>
+                                <li><i class="bx bx-group"></i> Collaborative teamwork, code review, mentoring sub-level members, and technical documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
         </section><!-- End Skills Section -->
 
